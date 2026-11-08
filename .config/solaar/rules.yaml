@@ -1,0 +1,13 @@
+%YAML 1.3
+---
+- Key: [Forward Button, pressed]
+- KeyPress:
+  - XF86_AudioRaiseVolume
+  - click
+...
+---
+- Key: [Back Button, pressed]
+- KeyPress:
+  - XF86_AudioLowerVolume
+  - click
+...
