@@ -1,0 +1,35 @@
+
+@theme "/usr/share/rofi/themes/solarized_alternate.rasi"
+
+window {
+  font:"JetBrainsMonoNF,15";
+}
+entry {
+  placeholder: "Пошук";
+  vertical-align: 0.5;
+  horizontal-align: 0.5;
+}
+element {
+  orientation: horizontal;
+  children: [ element-icon, element-text ];
+}
+element-text {
+  vertical-align: 0.5;
+}
+element-icon {
+  size:32;
+  padding:3;
+}
+inputbar {
+  children: [entry,overlay,icon-current-entry];
+}
+icon-current-entry{
+  size:64;
+  vertical-align: 0.5;
+}
+mainbox {
+  children: [inputbar,mode-switcher,listview];
+}
+button {
+  text-color: @foreground;
+}
