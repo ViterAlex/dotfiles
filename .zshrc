@@ -30,3 +30,5 @@ eval "$(oh-my-posh init zsh --strict --config /home/oleksa/.local/share/oh-my-po
 if [ -z "$TMUX" ]; then
     tmux attach -t main 2>/dev/null || exec tmux new-session -s main
 fi
+source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
