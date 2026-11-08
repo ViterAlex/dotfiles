@@ -1,0 +1,6 @@
+dotfiles
+.config/obsidian/*
+!.config/obsidian/obsidian.json
+.config/inkscape/autosave/
+.config/inkscape/cache/
+*.log
