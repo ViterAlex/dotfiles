@@ -73,6 +73,8 @@ input "type:keyboard" {
 
 bindgesture swipe:3:left workspace next
 bindgesture swipe:3:right workspace prev   
+
+focus_follows_mouse no
 #
 # You can get the names of your inputs by running: swaymsg -t get_inputs
 # Read `man 5 sway-input` for more information about this section.
