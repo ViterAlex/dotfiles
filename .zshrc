@@ -27,7 +27,7 @@ unset rc
 bindkey -v
 # set -o vi
 eval "$(oh-my-posh init zsh --strict --config /home/oleksa/.local/share/oh-my-posh/themes/oleksa.json)"
-if [ -z "$TMUX" ]; then
+if [ -z "$TMUX" ] && [ "$TERM" = "foot" ]; then
     tmux attach -t main 2>/dev/null || exec tmux new-session -s main
 fi
 source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
