@@ -11,6 +11,7 @@ export XDG_STATE_HOME="$HOME/.local/state"
 # Default editor used by git, crontab, etc.
 export EDITOR="nvim"
 export VISUAL="nvim"
+export TERMINAL="foot"
 
 # ---------- GPG ----------
 export GPG_TTY=$(tty)
