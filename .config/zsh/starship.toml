@@ -12,6 +12,8 @@ $cmd_duration\
 $line_break\
 $python\
 $character"""
+add_newline = false
+continuation_prompt = '▶▶ '
 
 [directory]
 style = "blue"
