@@ -4,3 +4,4 @@ dotfiles
 .config/inkscape/autosave/
 .config/inkscape/cache/
 *.log
+.config/zsh/plugins/
