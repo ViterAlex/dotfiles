@@ -42,6 +42,7 @@ vim.opt.foldmethod = "expr"
 vim.opt.foldexpr = "v:lua.vim.treesitter.foldexpr()"
 vim.opt.wrap = false
 vim.opt.number = true
+vim.opt.relativenumber = true
 vim.opt.signcolumn = "yes"
 vim.opt.expandtab = true
 vim.opt.formatoptions:append("r")
