@@ -30,10 +30,12 @@ output * bg /home/oleksa/Pictures/1439925.jpg fill
 # Example configuration:
 #
 #   output HDMI-A-1 resolution 1920x1080 position 1920,0
-  # output eDP-1 resolution 1920x1200 position 2560 0
+  output eDP-1 resolution 1920x1200 position 2560 0
   output DP-1 resolution 1920x1080 position 640 0
   output DP-5 resolution 2560x1440 position 0 0
+  output DP-7 resolution 2560x1440 position 0 0
   output DP-6 resolution 2560x1440 position 0 0
+  output DP-8 resolution 2560x1440 position 0 0
   set $laptop <laptop_output_identifier>
   exec always ./config.d/close-lid.sh
   bindswitch --reload --locked lid:on output $laptop disable
