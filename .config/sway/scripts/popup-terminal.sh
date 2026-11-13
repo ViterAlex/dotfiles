@@ -8,7 +8,7 @@ size_and_pos=$(
     {
       width,
       w: ((.width  * 0.75) | floor),
-      h: ((.height * 0.25) | floor)
+      h: ((.height * 0.3) | floor)
     }' |
   jq '{
     x: (((.width - .w) / 2) | floor),
