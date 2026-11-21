@@ -69,7 +69,22 @@ lssh() {
   # Execute SSH inside the container, letting it parse the mounted config file natively
   docker exec -it legacy-box ssh -F /root/.ssh/config "$target_host"
 }
-
+bounce_peer() {
+  local host="gw3.sof144.mil"
+  local peer="${1:-peer-Podil}"
+  # Check whether the peer exists before toggling its state.
+  ssh "$host" "/interface/wireguard/peers
+    :local id [find name=\"$peer\"]\n
+    :if ([:len \$id] > 0) do={\n
+      set \$id disabled=yes\n
+      :delay 1s\n
+      set \$id disabled=no\n
+      :put \"Toggled $peer\"\n
+    } else={\n
+      :put \"Peer $peer not found\"\n
+      :onerror e in={} { /quit }\n
+    }"
+}
 # =========================================================
 # Video
 # =========================================================
