@@ -5,7 +5,9 @@
 # e.g. image=$HOME/Pictures/default.png
 image=/home/oleksa/Pictures/1439925.jpg
 scaling=fill
-# clock
+indicator
+grace=5
+grace-no-mouse=false
+grace-no-keyboard=false
 ignore-empty-password
 ready-fd
-
