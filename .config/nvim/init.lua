@@ -49,16 +49,16 @@ vim.opt.formatoptions:append("r")
 vim.opt.formatoptions:append("n")
 vim.opt.formatoptions:remove("t")
 vim.opt.swapfile = false
-vim.opt.shiftwidth = 4
-vim.opt.softtabstop = 4
+vim.opt.shiftwidth = 2
+vim.opt.softtabstop =2
 vim.opt.spelllang = { "en", "uk" }
-vim.opt.tabstop = 4
+vim.opt.tabstop = 2
 vim.opt.undofile = true
 vim.opt.clipboard = "unnamedplus"
 vim.opt.pumheight = 20
 vim.opt.mousemodel = "extend"
 vim.opt.winborder = "rounded"
-
+vim.opt.cmdheight = 0   
 vim.g.mapleader = " "
 
 vim.g.loaded_python3_provider = 0
