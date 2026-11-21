@@ -14,7 +14,7 @@
     ],
     "modules-right": [
         "pulseaudio",
-        "network",
+        // "network",
         "tray",
         "sway/language",
         "power-profiles-daemon",
@@ -115,12 +115,11 @@
             "critical": 15
        },
        "format": "{capacity}% {icon}",
-       "format-full": "{capacity}% {icon}",
+       "format-full": "{icon}",
        "format-charging": "{capacity}% 󰃨",
-       "format-plugged": "{capacity}% ",
+       "format-plugged": "",
        "format-alt": "{time} {icon}",
         // "format-good": "", // An empty format will hide the module
-        // "format-full": "",
         "format-icons": ["", "", "", "", ""]
    },
    "power-profiles-daemon": {
@@ -136,9 +135,9 @@
    },
    "network": {
        // "on-click": "hyprctl dispatch \"hl.dsp.exec_cmd('[float; center] XDG_CURRENT_DESKTOP=GNOME gnome-control-center network')\"",
-       "format-wifi": "{essid} ({signalStrength}%) ",
-       "format-ethernet": "{ipaddr}/{cidr} 󰊗",
-       "tooltip-format": "{ifname} via {gwaddr} 󰊗",
+       "format-wifi": "{essid} ",
+       "format-ethernet": "󰊗",
+       "tooltip-format": "{ipaddr}",
        "format-linked": "{ifname} (No IP) 󰊗",
        "format-disconnected": "Disconnected ⚠"
    },
@@ -152,8 +151,8 @@
         "format-source-muted": "",
         "format-icons": {
             "headphone": "",
-            "hands-free": "󰂑",
-            "headset": "󰂑",
+            "hands-free": " ",
+            "headset": "󱡒 ",
             "phone": "",
             "portable": "",
             "car": "",
@@ -181,8 +180,8 @@
        "menu-actions": {
            "lock": "swaylock",
            "logout": "sway exit",
-           "shutdown": "shutdown",
-           "reboot": "reboot",
+           "shutdown": "shutdown --now",
+           "reboot": "reboot --now",
            "suspend": "systemctl suspend",
            "hibernate": "systemctl hibernate"
        }
