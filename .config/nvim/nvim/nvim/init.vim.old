@@ -1,0 +1,31 @@
+syntax on
+highlight LineNr ctermfg=Yellow guifg=Yellow
+set cursorline
+set number
+set tabstop=4
+set shiftwidth=4
+set expandtab
+set smartindent
+set hlsearch
+" Налаштування вигляду курсора для різних режимів
+if has("terminfo")
+    " Режим вставки (Insert) — вертикальна риска (|)
+    let &t_SI = "\e[5 q"
+    " Нормальний режим (Normal) — блок (█)
+    let &t_EI = "\e[1 q"
+
+    " Додатково для режиму заміни (Replace), якщо потрібно — підкреслення (_)
+    let &t_SR = "\e[3 q"
+endif
+set langmap=йq,цw,уe,кr,еt,нy,гu,шi,щo,зp,х[,ї],фa,іs,вd,аf,пg,рh,оj,лk,дl,ж\\;,є',яz,чx,сc,мv,иb,тn,ьm,б\\,,ю.,ЙQ,ЦW,УE,КR,ЕT,НY,ГU,ШI,ЩO,ЗP,Х{,Ї},ФA,ІS,ВD,АF,ПG,РH,ОJ,ЛK,ДL,Ж:,Є\",ЯZ,ЧX,СC,МV,ИB,ТN,ЬM,Б<,Ю>
+" Мапінг самої двокрапки (клавіша 'Ж' в українській розкладці)
+cmap ж :
+
+" Скорочення для базових команд збереження та виходу
+cabbrev й q
+cabbrev й! q!
+cabbrev щ w
+cabbrev щй wq
+cabbrev йщ qw
+cabbrev щф wa
+autocmd FileType netrw nmap <buffer> <CR> <Plug>NetrwLocalBrowseCheck
