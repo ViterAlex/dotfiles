@@ -33,3 +33,9 @@
     fi
     export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
     ```
+4. Додати шрифт JetBrainsMono
+```zsh
+wget https://download.jetbrains.com/fonts/JetBrainsMono-2.304.zip
+unzip JetBrainsMono-2.304.zip -d ~/.local/share/fonts/JetBrainsMonoNF
+
+```
