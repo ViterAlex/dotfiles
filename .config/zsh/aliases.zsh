@@ -1,6 +1,7 @@
 # Better ls
 alias ls='eza --icons --git'
 
+
 # Detailed listing
 alias ll='eza -lh --icons --git'
 
@@ -54,10 +55,12 @@ alias vim='nvim'
 alias glog='PAGER="less -F -X" git log'                              # -F quit if one screen, -X no clear on exit
 alias gadog='PAGER="less -F -X" git log --all --decorate --oneline --graph'
 alias dotfiles='git --git-dir=$HOME/dotfiles --work-tree=$HOME'
-alias dfs='dotfiles status'
 alias dfa='dotfiles add'
 alias dfc='dotfiles commit'
+alias dfd='dotfiles diff'
 alias dfl='dotfiles log --oneline -n 10'
+alias dfp='dotfiles push'
+alias dfs='dotfiles status'
 
 # =========================================================
 # SSH-proxy for old hosts
